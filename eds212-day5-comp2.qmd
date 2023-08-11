@@ -4,4 +4,47 @@ format: html
 editor: visual
 ---
 
-## 
+```{r}
+library(tidyverse)
+
+```
+
+## Some logical operators
+
+-   == (does this match?)
+
+-   != (do these not match?)
+
+-   \>, \<, \>=, \<=
+
+-   &, \|
+
+```{r}
+
+4 == 5 # does 4 equal 5?
+
+4 == 4 # does 4 match 4?
+
+4 != 5 # does 4 not match 5?
+
+4 == "4" # does 4 match "4"?
+
+# with assigned variables:
+cat <- 10
+dog <- 7
+
+cat > dog # is cat greater than dog?
+
+# Is dog greater than cat, OR is cat less than 20?
+dog > cat | cat < 20 # OR statement asks if one of them is true
+
+# Is dog less than cat AND cat == 10
+dog < cat & cat == 10
+
+dog < cat & cat > 2 & 4 >= dog
+```
+
+```{r}
+# need to load the tidyverse in order to use ggplot2
+ggplot(data = mtcars, aes(x = wt, y = mpg)) + geom_point(aes(size = mpg, color = wt)) + labs(x = "Car Weight (1000 pounds)", y = "Gas Mileage (mpg)", title = "Car weight efficiency relationship")
+```
